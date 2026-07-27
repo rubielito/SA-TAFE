@@ -136,7 +136,7 @@
         <th onclick="ordenar('score')">Score SA-TAFE <span class="sort-arrow">↕</span></th>
         <th onclick="ordenar('accion')">Señal <span class="sort-arrow">↕</span></th>
         <th>Alerta</th>
-        <th>Editar</th>
+        <th>Info BMV</th><th>Editar</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -313,7 +313,7 @@ function renderizar() {
       <td>${scoreHtml}</td>
       <td><span class="accion ${acCls}">${acLabel[d.accion]||d.accion}</span></td>
       <td class="alerta-cell">${d.alerta||''}</td>
-      <td><button class="edit-btn" onclick="abrirModal(${idx})">✏️ Editar</button></td>
+      <td><a href="https://www.bmv.com.mx/es/emisoras/perfil/${d.ticker}" target="_blank" class="edit-btn" style="text-decoration:none; display:inline-block; border-color:#0ea5e9; color:#0ea5e9; padding: 0.2rem 0.5rem;">🔗 BMV</a></td><td><button class="edit-btn" onclick="abrirModal(${idx})">✏️ Editar</button></td>
     </tr>`;
   }).join('');
 }
